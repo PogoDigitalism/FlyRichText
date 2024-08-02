@@ -13,7 +13,10 @@ dialogue_part = {
 			stroke = {
 				color = Color3.fromRGB(255, 170, 0),
 				thickness = 2
-			} 
+			},
+			text_color = {
+				color = Color3.fromRGB(0, 0, 0),
+			},
 		},
 		["Suit Man"] = {
 			stroke = {

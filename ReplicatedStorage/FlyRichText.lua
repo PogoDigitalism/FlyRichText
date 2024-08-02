@@ -35,16 +35,18 @@ local style_convertion = {
 local wrapping_funcs = {
 	stroke = function(text, stroke: stroke)
 		return string.format('<stroke color="rgb(%d, %d, %d)" thickness="%d">%s</stroke>', 
-			stroke.color.R, stroke.color.G, stroke.color.B, 
+			stroke.color.R*255, 
+			stroke.color.G*255, 
+			stroke.color.B*255, 
 			stroke.thickness, 
 			text)
 	end,
 	
 	text_color = function(text, text_color: text_color)
 		return string.format('<font color="rgb(%d, %d, %d)">%s</font>', 
-			text_color.color.R, 
-			text_color.color.G, 
-			text_color.color.B, 
+			text_color.color.R*255, 
+			text_color.color.G*255, 
+			text_color.color.B*255, 
 			text)
 	end,
 
